@@ -6,7 +6,7 @@ const Post = connection.define('post', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    Post: {
+    post: {
         type: Sequelize.TEXT,
         allowNull: false
     },
