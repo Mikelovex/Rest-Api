@@ -3,7 +3,9 @@ const app = express()
 const connection = require('../database/db')
 const bodyparser = require('body-parser')
 const Post = require('../models/Posts')
+const User = require('../models/Users')
 const PostController = require('../controllers/PostController')
+const UserController = require('../controllers/UserController')
 
 //Configuração bodyParser
 app.use(bodyparser.urlencoded({extended: true}))
@@ -19,7 +21,7 @@ connection
 
 
 app.use('/', PostController)
-
+app.use('/', UserController)
 
 
 

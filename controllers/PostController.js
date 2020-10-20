@@ -2,6 +2,9 @@ const express = require('express')
 const router = express.Router()
 const Post = require('../models/Posts')
 
+
+
+
 router.get('/posts', (req, res) => {
     Post.findAll().then((posts) => {
         console.log(posts)
