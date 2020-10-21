@@ -4,10 +4,8 @@ const Post = require('../models/Posts')
 
 
 
-
 router.get('/posts', (req, res) => {
     Post.findAll().then((posts) => {
-        console.log(posts)
         res.status(200).json({posts: posts})
     })
 })
@@ -16,7 +14,7 @@ router.get('/posts/:id', (req, res) => {
     const id = req.params.id
 
     Post.findByPk(id).then((post) => {
-        console.log(post)
+
         if(post == undefined) {
             res.status(401).json({error: 'post não encontrado'})
         }else {
