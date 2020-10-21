@@ -6,7 +6,7 @@ const Post = require('../models/Posts')
 const User = require('../models/Users')
 const PostController = require('../controllers/PostController')
 const UserController = require('../controllers/UserController')
-const auth = require('../controllers/Auth')
+const authentication = require('../controllers/Auth')
 
 //Configuração bodyParser
 app.use(bodyparser.urlencoded({extended: true}))
@@ -23,7 +23,7 @@ connection
 
 app.use('/', PostController)
 app.use('/', UserController)
-app.use('/', auth)
+app.use('/', authentication)
 
 
 

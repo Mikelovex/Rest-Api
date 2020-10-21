@@ -1,9 +1,10 @@
 const express = require('express')
 const router = express.Router()
 const User = require('../models/Users')
+const auth = require('../midlewares/midleware')
 
 
-router.get('/users', (req, res) => {
+router.get('/users',auth, (req, res) => {
     User.findAll().then((user) => {
         console.log(user)
         res.status(200).json({user: user})

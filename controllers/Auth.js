@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken')
 // criando segredo para usar no token
 const jwtSecret = 'dsaduahxjkbnzbcmguiebhxgywgiorqacxzm,bfbnmvhsgdsa'
 
-router.post('/auth', (req, res) => {
+router.post('/auth',(req, res) => {
     const {email, password} = req.body
 
     if(email != undefined) {
@@ -37,6 +37,7 @@ router.post('/auth', (req, res) => {
         res.status(400).json({error: 'Email invalido'})
     }
 })
+
 
 
 module.exports = router
