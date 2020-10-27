@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Post = require('../models/Posts')
-
+const auth = require('../midlewares/midleware')
 
 
 router.get('/posts', (req, res) => {

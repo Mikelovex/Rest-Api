@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const connection = require('../database/db')
 const bodyparser = require('body-parser')
 const Post = require('../models/Posts')
@@ -7,6 +8,8 @@ const User = require('../models/Users')
 const PostController = require('../controllers/PostController')
 const UserController = require('../controllers/UserController')
 const authentication = require('../controllers/Auth')
+
+app.use(cors())
 
 //Configuração bodyParser
 app.use(bodyparser.urlencoded({extended: true}))
