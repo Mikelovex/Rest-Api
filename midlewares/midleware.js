@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken')
 
 // criando segredo para usar no token
-const jwtSecret = 'dsaduahxjkbnzbcmguiebhxgywgiorqacxzm,bfbnmvhsgdsa'
+const jwtSecret = process.env.JWT_SECRET
 
 
 function auth(req, res, next) {
